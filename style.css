@@ -4,16 +4,58 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
 .product-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.5rem;
   background-color: #b45253;
-  width: 500px;
+  width: 450px;
   border-radius: 1rem;
   margin: 2rem;
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+
+  .line-through {
+    text-decoration: line-through;
+  }
+
+  img {
+    width: 100px;
+    border-radius: 1rem;
+  }
+
+  h1 {
+    color: #fdf4e3;
+    text-shadow: 5px -1px 2px rgba(0, 0, 0, 0.6);
+    font-family: "Cherry Cream Soda", system-ui;
+  }
 }
 
-img {
-  width: 100px;
+.promo-icon {
+  background-color: #84994f;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: absolute;
+  z-index: 2;
+  top: 2rem;
+  left: 50%;
 }

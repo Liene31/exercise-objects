@@ -14,9 +14,18 @@ const products = [
     productName: "Mango",
     productDescription: "Green Mango",
     productPrice: 2.5,
-    isPromo: true,
-    priceDiscount: 0.9,
+    isPromo: false,
+    priceDiscount: 0,
     productImg: "./image/mango.jpg",
+  },
+
+  {
+    productName: "Mandarin",
+    productDescription: "Orange Mandarin",
+    productPrice: 3.5,
+    isPromo: true,
+    priceDiscount: 3.25,
+    productImg: "./image/mandarin.jpg",
   },
 ];
 
@@ -43,10 +52,17 @@ products.forEach((product) => {
   const productDiscountPara = document.createElement("p");
 
   if (product.isPromo) {
+    productPricePara.classList.add("line-through");
     productDiscountPara.textContent = "€ ";
     const productDiscountSpan = document.createElement("span");
     productDiscountSpan.textContent = product.priceDiscount;
     productDiscountPara.append(productDiscountSpan);
+
+    //create promo-icon div with class of promo
+    const promoIconDiv = document.createElement("div");
+    promoIconDiv.textContent = "promo";
+    promoIconDiv.classList.add("promo-icon");
+    containerDiv.append(promoIconDiv);
   }
 
   productContainerPara.append(
