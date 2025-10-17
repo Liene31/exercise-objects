@@ -35,8 +35,9 @@ products.forEach((product) => {
 
   const productImg = document.createElement("img");
   productImg.src = product.productImg;
+  productImg.alt = product.productName;
 
-  const productTitle = document.createElement("h1");
+  const productTitle = document.createElement("h2");
   productTitle.textContent = product.productName;
 
   const productDescriptionPara = document.createElement("p");
@@ -62,7 +63,7 @@ products.forEach((product) => {
     const promoIconDiv = document.createElement("div");
     promoIconDiv.textContent = "promo";
     promoIconDiv.classList.add("promo-icon");
-    containerDiv.append(promoIconDiv);
+    productContainerPara.append(promoIconDiv);
   }
 
   productContainerPara.append(
